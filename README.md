@@ -10,27 +10,27 @@ Low Prep PS Submission for Robotics Problem Statement by Contingent "Bitmask", f
 Ensure that you have ROS2 Jazzy installed. If not, install it from [here](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
 
 Once you have ROS2 setup, then install Gazebo Harmonic using the following commmands 
-'''
+```
 sudo apt-get install curl
 sudo curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 sudo apt-get update
 sudo apt-get install gz-harmonic
-'''
+```
 
 Now, clone this package into your Turtlebot 4 workspace
-'''
+```
 cd ~
 mkdir turtlebot4_ws
 mkdir turtlebot_ws/src
 cd turtlebot4_ws/src
-git clone https://github.com/YogeshwarSingh10/Robotics_Bitmask.git -b Jazzy
-'''
+git clone https://github.com/YogeshwarSingh10/Robotics_Bitmask.git
+```
 Install relevant dependencies
-'''
+```
 cd ~/turtlebot4_ws
 rosdep install --from-path src -yi
-'''
+```
 Build Packages
 ```
 source /opt/ros/jazzy/setup.bash
@@ -41,5 +41,27 @@ Source the workspace
 source ~/turtlebot4_ws/install/setup.bash
 echo 'source ~/turtlebot4_ws/install/setup.bash' >> ~/.bashrc
 ```
+
+## Launching the Simulation
+Use the following command to launch the robot in the Static Warehouse.
+```
+ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py
+```
+
+To launch it in the dynamic Warehouse environment, run the following command
+```
+```
+
+To launch two robots at the same time, run the following command. Note that both are under separate namespaces
+```
+ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py namespace:=/robot1 
+ros2 launch turtlebot4_gz_bringup turtlebot4_spawn.launch.py namespace:=/robot2 x:=0.0 y:=1.0 
+```
+
+To generate map of a single robot
+```
+
+```
+
 
 

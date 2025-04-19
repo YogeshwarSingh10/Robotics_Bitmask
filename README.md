@@ -63,6 +63,15 @@ View the map in Rviz2
 ```
 ros2 launch turtlebot4_viz view_navigation.launch.py
 ```
+or 
+```
+ros2 launch turtlebot4_viz view_robot.launch.py
+```
+![Screenshot 2025-04-19 231652](https://github.com/user-attachments/assets/d5bbf54b-923e-4cbd-b10a-d034902f712d)
+
+![Screenshot 2025-04-19 114133](https://github.com/user-attachments/assets/0b2ccd45-4439-4ccd-acac-4741ba1ea200)
+
+
 ## Multiple robots
 To launch two robots at the same time, run the following command. Note that both are under separate namespaces
 ```

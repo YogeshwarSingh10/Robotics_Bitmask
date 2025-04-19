@@ -1,7 +1,10 @@
 # Instructions for ROS2 Jazzy
 
 ## Table of Contents
-- 
+- [Installation](Installation)
+- [Launching the Simulation](Launching the Simulation)
+- [Moving the robot and generating Map](Moving the robot and generating Map)
+- [Multiple robots](Multiple robots) 
 
 
 ## Installation
@@ -46,16 +49,10 @@ Use the following command to launch the robot in the Dynamic Warehouse.
 ```
 ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py
 ```
-
-To launch two robots at the same time, run the following command. Note that both are under separate namespaces
+## Moving the robot and generating Map
+You can give it a velocity from the Terminal
 ```
-ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py namespace:=/robot1 
-ros2 launch turtlebot4_gz_bringup turtlebot4_spawn.launch.py namespace:=/robot2 x:=0.0 y:=1.0 
-```
-
-You can give it a velocity from the Terminal (changet topic to /robot2/cmd_vel to move the second robot.)
-```
-ros2 topic pub /robot1/cmd_vel geometry_msgs/msg/TwistStamped "{header: {stamp: {sec: 0, nanosec: 0}, frame_id: 'base_link'}, twist: {linear: {x: 0.3, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.2}}}"
+ros2 topic pub /cmd_vel geometry_msgs/msg/TwistStamped "{header: {stamp: {sec: 0, nanosec: 0}, frame_id: 'base_link'}, twist: {linear: {x: 0.3, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.2}}}"
 ```
 
 Now, run SLAM.
@@ -66,7 +63,12 @@ View the map in Rviz2
 ```
 ros2 launch turtlebot4_viz view_navigation.launch.py
 ```
-
+## Multiple robots
+To launch two robots at the same time, run the following command. Note that both are under separate namespaces
+```
+ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py namespace:=/robot1 
+ros2 launch turtlebot4_gz_bringup turtlebot4_spawn.launch.py namespace:=/robot2 x:=0.0 y:=1.0 
+```
 
 
 

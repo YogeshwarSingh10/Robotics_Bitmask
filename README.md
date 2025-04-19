@@ -1,5 +1,5 @@
 # Robotics_Bitmask
-Low Prep PS Submission for Robotics Problem Statement by Contingent "Bitmask", for STC General Championship - Tech, 2025.
+Low Prep PS Submission for Robotics Problem Statement by Contingent **Bitmask**, for STC General Championship - Tech, 2025.
 
 ## Table of Contents
 - 
@@ -43,13 +43,9 @@ echo 'source ~/turtlebot4_ws/install/setup.bash' >> ~/.bashrc
 ```
 
 ## Launching the Simulation
-Use the following command to launch the robot in the Static Warehouse.
+Use the following command to launch the robot in the Dynamic Warehouse.
 ```
 ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py
-```
-
-To launch it in the dynamic Warehouse environment, run the following command
-```
 ```
 
 To launch two robots at the same time, run the following command. Note that both are under separate namespaces
@@ -58,10 +54,20 @@ ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py namespace:=/robot1
 ros2 launch turtlebot4_gz_bringup turtlebot4_spawn.launch.py namespace:=/robot2 x:=0.0 y:=1.0 
 ```
 
-To generate map of a single robot
+You can give it a velocity from the Terminal (changet topic to /robot2/cmd_vel to move the second robot.)
+```
+ros2 topic pub /robot1/cmd_vel geometry_msgs/msg/TwistStamped "{header: {stamp: {sec: 0, nanosec: 0}, frame_id: 'base_link'}, twist: {linear: {x: 0.3, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.2}}}"
 ```
 
+Now, run SLAM.
 ```
+ros2 launch turtlebot4_navigation slam.launch.py
+```
+View the map in Rviz2
+```
+ros2 launch turtlebot4_viz view_navigation.launch.py
+```
+
 
 
 

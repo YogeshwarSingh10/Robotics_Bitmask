@@ -2,9 +2,9 @@
 
 ## Table of Contents
 - [Installation](#Installation)
-- [Launching the Simulation](Launching the Simulation)
-- [Moving the robot and generating Map](Moving the robot and generating Map)
-- [Multiple robots](Multiple robots) 
+- [Launching the Simulation](#Launching the Simulation)
+- [Moving the robot and generating Map](#Moving the robot and generating Map)
+- [Multiple robots](#Multiple robots) 
 
 
 ## Installation

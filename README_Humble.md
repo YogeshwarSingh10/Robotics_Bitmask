@@ -45,4 +45,6 @@ Open a new terminal(for rviz)
   source install/setup.bash
   ros2 launch turtlebot4_viz view_robot.launch.py
 ```
+[Screencast from 04-19-2025 10_31_06 PM.webm](https://github.com/user-attachments/assets/ea998cf1-880d-4efc-8483-e3ab47e1622e)
+
 

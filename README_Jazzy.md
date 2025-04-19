@@ -45,7 +45,7 @@ echo 'source ~/turtlebot4_ws/install/setup.bash' >> ~/.bashrc
 ```
 
 ## Launching the Simulation
-Use the following command to launch the robot in the Dynamic Warehouse.
+Use the following command to launch the robot in the Dynamic Warehouse. (Only the warehouse map is a dynamic one.)
 ```
 ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py
 ```

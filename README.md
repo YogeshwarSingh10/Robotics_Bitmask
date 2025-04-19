@@ -32,14 +32,14 @@ cd ~/turtlebot4_ws
 rosdep install --from-path src -yi
 '''
 Build Packages
-'''
+```
 source /opt/ros/jazzy/setup.bash
 colcon build --symlink-install
-'''
+```
 Source the workspace
-'''
+```
 source ~/turtlebot4_ws/install/setup.bash
 echo 'source ~/turtlebot4_ws/install/setup.bash' >> ~/.bashrc
-'''
+```
 
 

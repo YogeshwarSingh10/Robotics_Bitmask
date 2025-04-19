@@ -1,10 +1,10 @@
 # Instructions for ROS2 Jazzy
 
 ## Table of Contents
-- [Installation](#Installation)
-- [Launching the Simulation](#Launching the Simulation)
-- [Moving the robot and generating Map](#Moving the robot and generating Map)
-- [Multiple robots](#Multiple robots) 
+- [Installation](#installation)
+- [Launching the Simulation](#launching-the-simulation)
+- [Moving the robot and generating Map](#moving-the-robot-and-generating-map)
+- [Multiple robots](#multiple-robots)
 
 
 ## Installation

@@ -1,5 +1,5 @@
 # Robotics_Bitmask
- Prep PS Submission for Robotics Problem Statement by Contingent **Bitmask**, for STC General Championship - Tech, 2025.
+ Low Prep PS Submission for Robotics Problem Statement by Contingent **Bitmask**, for STC General Championship - Tech, 2025.
 
 ## Table of Contents
 - 

@@ -21,6 +21,11 @@ Open a new terminal and enter the following commands
   source install/setup.bash
   ros2 launch turtlbot4_ignition_bringup turtlebot4_ignition.launch.py
 ```
+![Screenshot from 2025-04-19 23-27-47](https://github.com/user-attachments/assets/40e52746-a8db-4c74-9cf8-d45842f30b8f)
+![Screenshot from 2025-04-19 23-28-28](https://github.com/user-attachments/assets/cf62e3bb-51f0-456d-8f72-2079e2d7c354)
+![Screenshot from 2025-04-19 23-29-33](https://github.com/user-attachments/assets/64e54fa5-38fb-4d4e-83b9-5fbe6ff8b855)
+![Screenshot from 2025-04-19 23-29-54](https://github.com/user-attachments/assets/67c510f8-5b8d-445a-89ba-5e272d623d75)
+
 Open a new terminal(this is for enabling teleop twist keyboard)
 ```bash
   sudo apt install ros-humble-teleop-twist-keyboard
